@@ -1,0 +1,211 @@
+/* CSS para el Perfil Simple en Tema Oscuro */
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-image: url('img/fondo.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  opacity: 0.98;
+  color: #eee; /* Texto claro */
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #eee; /* Enlaces claros */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Card */
+.container {
+  height: 100vh;
+  margin-inline: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  position: relative;
+  width: 290px;
+  background: linear-gradient(180deg, #303030, #121212); /* Fondo del card oscuro */
+  border-radius: 1rem 1rem 11rem 11rem;
+  padding: 2.5rem 1.5rem 3.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  
+}
+
+.card__border {
+  width: 124px;
+  height: 124px;
+  background: linear-gradient(135deg, #9b30ff, #0044ff); /* Color del borde del círculo */
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+
+}
+
+.card__perfil {
+  width: 104px;
+  height: 104px;
+  background-color: #333; /* Color del perfil */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card__nome,
+.card__profession {
+  color: #fff; /* Texto claro */
+}
+
+.card__nome {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card__profession {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Card Info */
+.info {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #9b30ff, #0044ff); /* Fondo del card info oscuro */
+  padding: 2.5rem 1.5rem 3.3rem;
+  border-radius: 1rem 1rem 11rem 11rem;
+  clip-path: circle(16px at 250px 40px);
+  transition: clip-path 0.4s ease-in-out;
+}
+
+.info__icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: white; /* Color del icono */
+  display: inline-flex;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.info__img {
+  width: 45px;
+}
+
+.info__border {
+  width: 64px;
+  height: 64px;
+  background:linear-gradient(135deg, #2e294e, #0c2461, #8e44ad); /* Color del borde del círculo */
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  transform: translateX(-3rem);
+  transition: transform 0.8s;
+}
+
+.info__perfil {
+  width: 52px;
+  height: 52px;
+  background-color: #333; /* Color del perfil */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.info__data {
+  display: grid;
+  row-gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  transform: translateX(-4rem);
+  transition: transform 1s;
+}
+
+.info__name {
+  font-size: 1.1rem;
+  color: #ffffff; /* Blanco puro para un texto muy claro y brillante */
+  font-weight: bold;
+}
+
+.info__profession,
+.info__location {
+  font-size: 0.85rem;
+  color: #f0f0f0; /* Un gris claro para un texto más brillante */
+} 
+
+
+
+.info__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  transform: translateX(-5rem);
+  transition: transform 1.2s;
+}
+
+.info__social-link {
+  width: 32px;
+  height: 32px;
+  background-color: #9b30ff; /* Color de los enlaces sociales */
+  border-radius: 50%; /* Hacer los bordes más redondos */
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s;
+}
+
+.info__social-link:hover {
+  transform: translateY(-0.25rem);
+}
+
+.info__social-icon {
+  display: inline-flex;
+  background: black; /* Color del icono social */
+  padding: 0.25rem;
+  border-radius: 50%;
+  color: #fff; /* Texto claro */
+  font-size: 1rem;
+}
+
+/* Card info animation */
+.info:hover {
+  clip-path: circle(75%);
+}
+
+.info:hover .info__icon {
+  opacity: 0;
+}
+
+.info:hover .info__border,
+.info:hover .info__data,
+.info:hover .info__social {
+  transform: translateX(0);
+}
